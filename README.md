@@ -44,7 +44,7 @@ ViT_project/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/ViT_project.git
+   git clone https://github.com/yourusername/ViT.git
    cd ViT_project
    ```
 
@@ -81,36 +81,6 @@ ViT_project/
    ```
 
    You can download the dataset using the following script:
-
-   ```python
-   # download_data.py
-   import requests
-   from pathlib import Path
-   import zipfile
-
-   # Define the source URL and the destination directory
-   dataset_url = "https://github.com/mrdbourke/pytorch-deep-learning/raw/main/data/pizza_steak_sushi.zip"
-   destination_dir = Path("data")
-
-   # Download the dataset
-   if not (destination_dir / "pizza_steak_sushi").exists():
-       destination_dir.mkdir(parents=True, exist_ok=True)
-       zip_path = destination_dir / "pizza_steak_sushi.zip"
-       with open(zip_path, "wb") as f:
-           print("Downloading dataset...")
-           response = requests.get(dataset_url)
-           f.write(response.content)
-       # Unzip the dataset
-       with zipfile.ZipFile(zip_path, "r") as zip_ref:
-           print("Extracting dataset...")
-           zip_ref.extractall(destination_dir)
-       zip_path.unlink()
-       print("Dataset ready!")
-   else:
-       print("Dataset already exists.")
-   ```
-
-   Save this script as `download_data.py` and run:
 
    ```bash
    python download_data.py
@@ -156,14 +126,6 @@ cd notebooks
 jupyter notebook ViT_from_scratch.ipynb
 ```
 
-## Requirements
-
-All required packages are listed in `requirements.txt`. Install them using:
-
-```bash
-pip install -r requirements.txt
-```
-
 ## References
 
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929)
@@ -174,21 +136,6 @@ pip install -r requirements.txt
 
 - **Daniel Bourke** for his comprehensive [Vision Transformer tutorial](https://github.com/mrdbourke/pytorch-deep-learning).
 - The [PyTorch community](https://discuss.pytorch.org/) for continuous support and development.
-
----
-
-### **requirements.txt**
-
-```
-torch>=1.12
-torchvision>=0.13
-torchinfo>=1.5.4
-matplotlib>=3.3.0
-numpy>=1.18.0
-Pillow>=7.0.0
-tqdm>=4.0.0
-requests>=2.0.0
-```
 
 ---
 
