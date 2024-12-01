@@ -5,7 +5,7 @@ This repository contains an implementation of the Vision Transformer (ViT) archi
 ## Project Structure
 
 ```
-ViT_project/
+Vision Transformer/
 ├── data/
 │   └── pizza_steak_sushi/
 │       ├── train/
